@@ -8,7 +8,9 @@ const dbConn = mysql.createConnection({
   database : 'sql2380170'
 });
 dbConn.connect(function(err) {
-  if (err) throw err;
+  if (err) {
+    throw err;
+  }
   console.log("Database Connected!");
 });
 module.exports = dbConn;
